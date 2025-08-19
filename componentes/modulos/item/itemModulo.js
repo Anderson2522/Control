@@ -1,33 +1,31 @@
-export function item() {
-
-    let item = document.createElement('div');
+export function item(titulo, urlImg, precio) {
+    let item = document.createElement("div");
     item.className = "item";
 
+    // título
+    let h3 = document.createElement("h3");
+    h3.textContent = titulo;
 
-    let h1 = document.createElement('h1');
-    h1.innerText= "Pikachu";
-    h1.className = "item__title";
+    // imagen
+    let img = document.createElement("img");
+    img.src = urlImg;
+    img.alt = titulo;
 
+    // precio
+    let p = document.createElement("p");
+    p.textContent = `$${precio}`;
 
-
-    let img = document.createElement('img');
-    img.src = "/assets/pika.png";
-    img.className = "item__img";
-
-
-    let p = document.createElement('p');
-    p.innerText = "Pikachu is an Electric-type Pokémon introduced in Generation 1.";
-    p.className = "item__description";
-
-     item.appendChild(h1);
-
+    // agregar todo al item
+    item.appendChild(h3);
     item.appendChild(img);
-
     item.appendChild(p);
 
-   
+    // evento click
+    item.addEventListener("click", ()=>{
+        item.classList.add("verde");
+        let rHeader = document.querySelector(".header");
+        rHeader.classList.add("ocultar");
+    });
 
     return item;
-
-
 }

@@ -2,25 +2,29 @@
    width: 25rem;
    height: 25rem;
    background-color: rgb(75, 15, 116);
-   
- 
+   border-radius: 5px;
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   color: white; /* texto visible */
+   text-align: center;
 }
 
-.item__img{
-   width: 15rem;
-   height: 15rem;
-   padding: 2rem;
-margin-left: 4rem;
+.item img {
+   max-width: 100%;
+   max-height: 60%; /* deja espacio para título y precio */
+   object-fit: contain;
 }
 
-.item__title{
-   color: white;
-   font-size: 1.5rem;
-   margin-left: 5rem;
+.item h3 {
+   font-size: 1.2rem;
+   margin: 0.5rem 0;
 }
 
-.item__description{
-   color: white;
+.item p {
    font-size: 1rem;
-   margin-left: 5rem;
+   font-weight: bold;
+   margin: 0.5rem 0;
 }
